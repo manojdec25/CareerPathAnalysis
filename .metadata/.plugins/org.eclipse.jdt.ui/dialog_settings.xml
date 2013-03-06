@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="/home/manoj/projectcmpe282/CareerPathAnalysis/HadoopApriory/lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="JavaElementSearchActions">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="0" key="index"/>
 	</section>
 </section>
