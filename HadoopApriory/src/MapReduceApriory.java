@@ -158,7 +158,7 @@ public class MapReduceApriory {
 					});
 					StringBuilder sb = new StringBuilder();
 					for (String intermediateValue : intermediateValues) {
-						sb.append("{" + intermediateValue + "};");
+						sb.append("{" + intermediateValue + "}%");
 					}
 					String collectOutput = sb.toString();
 					collectOutput = collectOutput.substring(0,
@@ -190,7 +190,7 @@ public class MapReduceApriory {
 			i += 1;
 			String line = value.toString();
 			String nextLevelValues = "";
-			StringTokenizer st = new StringTokenizer(line, ";");
+			StringTokenizer st = new StringTokenizer(line, "%");
 			System.out.println("Inside Map1 Now");
 
 			if (st.hasMoreTokens()) {
@@ -218,7 +218,7 @@ public class MapReduceApriory {
 								Bytes.toBytes(String.valueOf(aprioryEntry
 										.getValue())));
 
-						nextLevelValues += aprioryEntry.getKey() + ";";
+						nextLevelValues += aprioryEntry.getKey() + "%";
 					}
 
 				}
@@ -393,7 +393,7 @@ public class MapReduceApriory {
 
 	public static void main(String[] args) throws Exception {
 		JobConf conf = new JobConf();
-		conf.setInt(FixedLengthInputFormat.FIXED_RECORD_LENGTH, 2463);
+		conf.setInt(FixedLengthInputFormat.FIXED_RECORD_LENGTH, 2309);
 		conf.setJobName("apriori");
 		conf.setInputFormat(FixedLengthInputFormat.class);
 		conf.setOutputFormat(TextOutputFormat.class);
